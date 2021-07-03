@@ -1,0 +1,216 @@
+@import url("https://fonts.googleapis.com/css2?family=Bangers&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Asap+Condensed:ital@1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cookie&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Akaya+Telivigala&display=swap");
+
+body {
+  background-color: #ebe1ce;
+  background-image: url("https://www.transparenttextures.com/patterns/arches.png");
+}
+
+.jumbotron {
+  background-color: #efc5b5;
+}
+
+.heading {
+  text-align: center;
+  font-family: "Bangers", cursive;
+}
+
+
+.heading h1 {
+  font-size: 70px;
+  font-size: clamp(2.6rem, 4.5vw, 4rem);
+}
+
+.titles h3 {
+  font-family: "Oswald", sans-serif;
+  font-weight: 900;
+  font-size: 30px;
+  font-size: clamp(1.75rem, 2vw, 3rem);
+}
+
+.titles p {
+  font-family: "Asap Condensed", sans-serif;
+  font-size: 20px;
+  text-align: justify;
+  font-size: clamp(1.4rem, 0.5vw, 3rem);
+}
+.flex-items p {
+  font-size: clamp(1.3rem, 1.45vw, 2rem);
+}
+
+.mn-cnt {
+  padding: 5px;
+}
+
+.last {
+  padding: 0;
+  margin: 0;
+}
+
+.jumbotron p {
+  padding: 0;
+}
+
+.jumbotron {
+  position: relative;
+}
+
+.cards {
+  position: relative;
+}
+
+.news-img img {
+  width: 600px;
+  height: 300px;
+  object-fit: cover;
+  margin: auto;
+  border-radius: 10px;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.loading {
+  opacity: 0;
+  display: flex;
+  position: fixed;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: opacity 0.3s ease-in;
+}
+
+.loading.show {
+  opacity: 1;
+}
+
+.ball {
+  background-color: #777;
+  border-radius: 50%;
+  margin: 5px;
+  height: 10px;
+  width: 10px;
+  animation: jump 0.5s ease-in infinite;
+}
+
+.ball:nth-of-type(2) {
+  animation-delay: 0.1s;
+}
+
+.ball:nth-of-type(3) {
+  animation-delay: 0.2s;
+}
+
+@keyframes jump {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.share-btn-container {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.share-btn-container a i {
+  font-size: 32px;
+}
+
+.share-btn-container a {
+  margin: 12px 0;
+  transition: 500ms;
+}
+
+.share-btn-container a:hover {
+  transform: scale(1.2);
+}
+
+.share-btn-container .fa-facebook {
+  color: #3b5998;
+}
+
+.share-btn-container .fa-twitter {
+  color: #1da1f2;
+}
+
+.share-btn-container .fa-linkedin {
+  color: #0077b5;
+}
+
+.share-btn-container .fa-pinterest {
+  color: #bd081c;
+}
+
+.share-btn-container .fa-whatsapp {
+  color: #25d366;
+}
+
+.flex-items {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .titles h3 {
+    font-size: 1.9rem;
+  }
+
+  .titles p {
+    font-size: 1.7rem;
+  }
+  .flex-items p {
+    font-size: 1.65rem;
+    text-align: left;
+  }
+}
+
+@media (max-width: 767px) {
+  .share-btn-container {
+    position: relative;
+    transform: unset;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    /* display: flex; */
+    flex-direction: row;
+
+    padding: 0px 0px;
+    justify-content: center;
+  }
+
+  .share-btn-container a {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .jumbotron {
+    padding: 10px;
+    text-align: center;
+    margin: 10px;
+  }
+  .jumbotron p {
+    margin: 4px;
+  }
+  .jumbotron .lt a {
+    margin: 0;
+  }
+}
+
+
+.opt-btn{
+   margin: 0 auto;
+   font-family: 'Akaya Telivigala', cursive;
+}
+
