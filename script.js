@@ -11,20 +11,23 @@ var state = {
   window: 5,
 };
 
-window.addEventListener("scroll", () => {
-  if (
+window.addEventListener("scroll", scrolling)
+
+function scrolling(){
+   if (
     window.scrollY + window.innerHeight >=
     document.documentElement.scrollHeight
   ) {
     showLoading();
   }
-});
+}
 
 
 
 window.addEventListener("touchmove", butttonClick);
 
   function butttonClick(){
+     window.removeEventListener("scroll", scrolling);
     window.removeEventListener("touchmove", butttonClick);
     document.getElementById('btn-opt').style.display=  "block"; 
     var optButton = document.getElementById('btn-opt');
